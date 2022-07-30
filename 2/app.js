@@ -3,6 +3,7 @@ const App = {
     // data() - метод передачи данных в html
     data() {
         return {
+            placeholderString: 'Введите название заметки...',
             title: 'Список заметок'
         }
     }
