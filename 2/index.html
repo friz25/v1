@@ -28,8 +28,12 @@
                   ({{ idx + 1 }}) {{ toUpperCase(note) }}
                   <button class="btn danger" @click="removeNote(idx)">удалить</button>
               </li>
+              <hr>
+              <li>
+                  <strong>Общее кол-во заметок: {{ notes.length }}</strong> | Удвоенное: {{ doubleCountComputed }}
+              </li>
           </ul>
-          <div v-else-if="notes.length === 0">Заметок пока нет. Добавьте первую</div>
+          <div v-else>Заметок пока нет. Добавьте первую</div>
       </div>
   </div>
 
