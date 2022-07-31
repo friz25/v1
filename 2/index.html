@@ -15,18 +15,18 @@
               <!--  (байнд для событий) "v-on:" это тоже самое что "@"       -->
               <input
                   type="text"
-                  v-bind:placeholder="placeholderString"
+                  :placeholder="placeholderString"
                   :value="inputValue"
-                  v-on:input="inputChangeHandler"
+                  @input="inputChangeHandler"
                   @keypress.enter="addNewNote"
               />
           </div>
-          <button class="btn" v-on:click="addNewNote">Добавить</button>
+          <button class="btn" @click="addNewNote">Добавить</button>
           <hr>
           <ul class="list" v-if="notes.length !== 0">
               <li class="list-item" v-for="(note, idx) in notes">
                   ({{ idx + 1 }}) {{ toUpperCase(note) }}
-                  <button class="btn danger" v-on:click="removeNote(idx)">удалить</button>
+                  <button class="btn danger" @click="removeNote(idx)">удалить</button>
               </li>
           </ul>
           <div v-else-if="notes.length === 0">Заметок пока нет. Добавьте первую</div>
