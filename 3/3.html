@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>3_next</title>
     <link rel="stylesheet" href="../theme.css">
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container" id="app">
+<div class="container" id="app" v-cloak>
     <div class="card">
         <div>{{ myHtml }}</div>
         <div v-html="myHtml"></div>
