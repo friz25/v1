@@ -9,7 +9,11 @@
 
   <div class="container" id="app">
       <div class="card">
-          <h1 :style="{color: inputValue.length < 5 ? 'darkred' : 'darkblue'}">{{ title }}</h1>
+          <h1 :style="{
+          color: inputValue.length < 5 ? 'darkred' : 'darkblue',
+          fontSize: inputValue.length < 6 ? '2rem' : '1.5rem'
+
+          }">{{ title }}</h1>
           <div class="form-control">
               <!--  (байнд для атрибутов) "v-bind:" это тоже самое что ":"    -->
               <!--  (байнд для событий) "v-on:" это тоже самое что "@"       -->
